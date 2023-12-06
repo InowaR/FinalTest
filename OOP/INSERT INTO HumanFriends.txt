@@ -1,0 +1,49 @@
+INSERT INTO HumanFriends.animals (color, name, lifetime, mass, sex)
+VALUES
+  ("черный", "Барсик", 15, 5, "мальчик"),
+  ("белый", "Мурзик", 15, 4, "девочка"),
+  ("коричневый", "Бобик", 10, 25, "мальчик"),
+  ("рыжий", "Скакун", 10, 20, "девочка"),
+  ("серый", "Чижик", 8, 1, "мальчик"),
+  ("серый", "Хомяк", 3, 2, "мальчик");
+
+INSERT INTO HumanFriends.pets (animal_id, price, nickname)
+VALUES
+  (1, 1000, "Барсик"),
+  (2, 2000, "Мурзик"),
+  (3, 3000, "Бобик"),
+  (4, 4000, "Шарик"),
+  (5, 5000, "Чижик"),
+  (6, 6000, "Хомяк");
+
+INSERT INTO HumanFriends.pack_animals (animal_id, lifting_capacity)
+VALUES
+  (3, 100),
+  (4, 200),
+  (5, 300);
+
+INSERT INTO HumanFriends.dogs (dog_id, breed, sound, date_of_birth, commands)
+VALUES
+  (1, "Дворняга", "гав", "2023-01-01", "сидеть, лежать, ко мне"),
+  (2, "Йоркширский терьер", "тяф", "2023-02-02", "сидеть, лежать, ко мне, дай лапу");
+
+INSERT INTO HumanFriends.cats (cat_id, breed, sound, date_of_birth, commands)
+VALUES
+  (1, "Сиамская", "мяу", "2023-03-03", "сидеть, лежать, ко мне, дай лапу"),
+  (2, "Мейн-кун", "мур", "2023-04-04", "сидеть, лежать, ко мне, дай лапу");
+
+INSERT INTO HumanFriends.hamsters (hamster_id, breed, sound, date_of_birth, commands)
+VALUES
+  (1, "Кэмпбелла", "чирк", "2023-05-05", "сидеть, лежать, ко мне");
+  
+INSERT INTO HumanFriends.horses (horse_id, breed, sound, date_of_birth, commands)
+VALUES
+  (1, "Арабская", "Фыр", "2023-06-06", "Шагать, рысью, галопом");
+
+INSERT INTO HumanFriends.camels (camel_id, breed, sound, date_of_birth, commands)
+VALUES
+  (1, "Бактрийский верблюд", "Хей-хо", "2023-07-07", "Шагать, рысью, верблюд");
+
+INSERT INTO HumanFriends.donkeys (donkey_id, breed, sound, date_of_birth, commands)
+VALUES
+  (1, "Обычный осел", "И-а", "2023-08-08", "Шагать, рысью, ехать");
