@@ -1,16 +1,8 @@
-# This is a sample Python script.
+from datetime import datetime
 
-# Press Shift+F10 to execute it or replace it with your code.
-# Press Double Shift to search everywhere for classes, files, tool windows, actions, and settings.
+from python.model.animal import Dog
 
+dog = Dog(1, "коричневый", "собака", 10, 3, "мужской", 10000, "Барли", "Овчарка", "гав", datetime(2023, 1, 1),
+          ["Cидеть", "Голос", "Ко мне"])
 
-def print_hi(name):
-    # Use a breakpoint in the code line below to debug your script.
-    print(f'Hi, {name}')  # Press Ctrl+F8 to toggle the breakpoint.
-
-
-# Press the green button in the gutter to run the script.
-if __name__ == '__main__':
-    print_hi('PyCharm')
-
-# See PyCharm help at https://www.jetbrains.com/help/pycharm/
+print(dog)
