@@ -1,5 +1,7 @@
 from typing import List
 
+from tabulate import tabulate
+
 from python.model.animal import *
 
 
@@ -11,6 +13,9 @@ class Registry:
         self.list_horses: List[Horse] = []
         self.list_camels: List[Camel] = []
         self.list_donkeys: List[Donkey] = []
+
+    def show_registry(self):
+        print(self.list_dogs)
 
     def create_dog(self, number, color, name, lifetime, mass, sex, price, nickname, breed, sound, date_of_birth,
                    commands):
