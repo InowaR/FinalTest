@@ -1,5 +1,6 @@
 from typing import List
 from tabulate import tabulate
+
 from python.model.animal import *
 
 
@@ -67,3 +68,21 @@ class Registry:
         donkey = Donkey(number, color, name, lifetime, mass, sex, lifting_capacity, breed, sound, date_of_birth,
                         commands)
         self.list_donkeys.append(donkey)
+
+    def find_dog_by_id(self, number):
+        for dog in self.list_dogs:
+            if dog.number == number:
+                print("Собака найдена")
+                return dog.commands
+
+    def add_new_command(self, number, command):
+        for dog in self.list_dogs:
+            if dog.number == number:
+                dog.add_new_command(command)
+
+    def show_animals_sorted_by_date_of_birth(self):
+        print(self.list_dogs[0].date_of_birth)
+
+        # s = self.list_dogs.sort(key = date_of_birth)
+        # for dog in self.list_dogs:
+        #     print(tabulate(dog.info()[1], headers=dog.info()[0], tablefmt='grid', stralign='center'))

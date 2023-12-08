@@ -41,6 +41,9 @@ class Dog(Pet):
             [(self.number, self.color, self.name, self.lifetime, self.mass, self.sex, self.price, self.nickname,
               self.breed, self.sound, self.date_of_birth, self.commands)]]
 
+    def add_new_command(self, command):
+        self.commands.append(command)
+
 
 class Cat(Pet):
     def __init__(self, number, color, name, lifetime, mass, sex, price, nickname, breed, sound, date_of_birth,

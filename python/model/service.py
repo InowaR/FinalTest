@@ -29,7 +29,11 @@ class Service:
     def show_registry(self):
         self.registry.show_registry()
 
+    def show_animals_sorted_by_date_of_birth(self):
+        self.registry.show_animals_sorted_by_date_of_birth()
+
 
 s = Service()
 s.create_dog()
 s.show_registry()
+s.show_animals_sorted_by_date_of_birth()
