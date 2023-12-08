@@ -3,7 +3,7 @@ CREATE DATABASE HumanFriends;
 USE HumanFriends;
 
 CREATE TABLE HumanFriends.animals (
-	id INT,
+	id INT AUTO_INCREMENT,
 	color TEXT,
 	name TEXT,
 	lifetime INT,
@@ -13,7 +13,7 @@ CREATE TABLE HumanFriends.animals (
 );
 
 CREATE TABLE HumanFriends.pets (
-	id INT,
+	id INT AUTO_INCREMENT,
 	animal_id INT,
 	price INT,
 	nickname TEXT,
@@ -22,7 +22,7 @@ CREATE TABLE HumanFriends.pets (
 );
 
 CREATE TABLE HumanFriends.pack_animals (
-	id INT,
+	id INT AUTO_INCREMENT,
 	animal_id INT,	
 	lifting_capacity INT,
 	PRIMARY KEY (id),
