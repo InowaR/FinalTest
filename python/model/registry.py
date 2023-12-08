@@ -1,7 +1,5 @@
 from typing import List
-
 from tabulate import tabulate
-
 from python.model.animal import *
 
 
@@ -15,7 +13,24 @@ class Registry:
         self.list_donkeys: List[Donkey] = []
 
     def show_registry(self):
-        print(self.list_dogs)
+        print("Собаки")
+        for dog in self.list_dogs:
+            print(tabulate(dog.info()[1], headers=dog.info()[0], tablefmt='grid', stralign='center'))
+        print("Кошки")
+        for cat in self.list_cats:
+            print(tabulate(cat.info()[1], headers=cat.info()[0], tablefmt='grid', stralign='center'))
+        print("Хомяки")
+        for hamster in self.list_hamsters:
+            print(tabulate(hamster.info()[1], headers=hamster.info()[0], tablefmt='grid', stralign='center'))
+        print("Лошади")
+        for horse in self.list_horses:
+            print(tabulate(horse.info()[1], headers=horse.info()[0], tablefmt='grid', stralign='center'))
+        print("Верблюды")
+        for camel in self.list_camels:
+            print(tabulate(camel.info()[1], headers=camel.info()[0], tablefmt='grid', stralign='center'))
+        print("Ослы")
+        for donkey in self.list_donkeys:
+            print(tabulate(donkey.info()[1], headers=donkey.info()[0], tablefmt='grid', stralign='center'))
 
     def create_dog(self, number, color, name, lifetime, mass, sex, price, nickname, breed, sound, date_of_birth,
                    commands):

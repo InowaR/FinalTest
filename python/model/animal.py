@@ -34,6 +34,13 @@ class Dog(Pet):
         return f'{self.number}, {self.color}, {self.name}, {self.lifetime}, {self.mass}, {self.sex}, ' \
                f'{self.price}, {self.nickname}, {self.breed}, {self.sound}, {self.date_of_birth}, {self.commands}'
 
+    def info(self):
+        return [
+            ['id', 'color', 'name', 'lifetime', 'mass', 'sex', 'price', 'nickname', 'breed', 'sound', 'date_of_birth',
+             'commands'],
+            [(self.number, self.color, self.name, self.lifetime, self.mass, self.sex, self.price, self.nickname,
+              self.breed, self.sound, self.date_of_birth, self.commands)]]
+
 
 class Cat(Pet):
     def __init__(self, number, color, name, lifetime, mass, sex, price, nickname, breed, sound, date_of_birth,
@@ -47,6 +54,13 @@ class Cat(Pet):
     def __str__(self):
         return f'{self.number}, {self.color}, {self.name}, {self.lifetime}, {self.mass}, {self.sex}, ' \
                f'{self.price}, {self.nickname}, {self.breed}, {self.sound}, {self.date_of_birth}, {self.commands}'
+
+    def info(self):
+        return [
+            ['id', 'color', 'name', 'lifetime', 'mass', 'sex', 'price', 'nickname', 'breed', 'sound', 'date_of_birth',
+             'commands'],
+            [(self.number, self.color, self.name, self.lifetime, self.mass, self.sex, self.price, self.nickname,
+              self.breed, self.sound, self.date_of_birth, self.commands)]]
 
 
 class Hamster(Pet):
@@ -62,6 +76,13 @@ class Hamster(Pet):
         return f'{self.number}, {self.color}, {self.name}, {self.lifetime}, {self.mass}, {self.sex}, ' \
                f'{self.price}, {self.nickname}, {self.breed}, {self.sound}, {self.date_of_birth}, {self.commands}'
 
+    def info(self):
+        return [
+            ['id', 'color', 'name', 'lifetime', 'mass', 'sex', 'price', 'nickname', 'breed', 'sound', 'date_of_birth',
+             'commands'],
+            [(self.number, self.color, self.name, self.lifetime, self.mass, self.sex, self.price, self.nickname,
+              self.breed, self.sound, self.date_of_birth, self.commands)]]
+
 
 class Horse(PackAnimal):
     def __init__(self, number, color, name, lifetime, mass, sex, lifting_capacity, breed, sound, date_of_birth,
@@ -75,6 +96,13 @@ class Horse(PackAnimal):
     def __str__(self):
         return f'{self.number}, {self.color}, {self.name}, {self.lifetime}, {self.mass}, {self.sex}, ' \
                f'{self.lifting_capacity}, {self.breed}, {self.sound}, {self.date_of_birth}, {self.commands}'
+
+    def info(self):
+        return [
+            ['id', 'color', 'name', 'lifetime', 'mass', 'sex', 'lifting_capacity', 'breed', 'sound', 'date_of_birth',
+             'commands'],
+            [(self.number, self.color, self.name, self.lifetime, self.mass, self.sex, self.lifting_capacity,
+              self.breed, self.sound, self.date_of_birth, self.commands)]]
 
 
 class Camel(PackAnimal):
@@ -90,6 +118,13 @@ class Camel(PackAnimal):
         return f'{self.number}, {self.color}, {self.name}, {self.lifetime}, {self.mass}, {self.sex}, ' \
                f'{self.lifting_capacity}, {self.breed}, {self.sound}, {self.date_of_birth}, {self.commands}'
 
+    def info(self):
+        return [
+            ['id', 'color', 'name', 'lifetime', 'mass', 'sex', 'lifting_capacity', 'breed', 'sound', 'date_of_birth',
+             'commands'],
+            [(self.number, self.color, self.name, self.lifetime, self.mass, self.sex, self.lifting_capacity,
+              self.breed, self.sound, self.date_of_birth, self.commands)]]
+
 
 class Donkey(PackAnimal):
     def __init__(self, number, color, name, lifetime, mass, sex, lifting_capacity, breed, sound, date_of_birth,
@@ -103,3 +138,10 @@ class Donkey(PackAnimal):
     def __str__(self):
         return f'{self.number}, {self.color}, {self.name}, {self.lifetime}, {self.mass}, {self.sex}, ' \
                f'{self.lifting_capacity}, {self.breed}, {self.sound}, {self.date_of_birth}, {self.commands}'
+
+    def info(self):
+        return [
+            ['id', 'color', 'name', 'lifetime', 'mass', 'sex', 'lifting_capacity', 'breed', 'sound', 'date_of_birth',
+             'commands'],
+            [(self.number, self.color, self.name, self.lifetime, self.mass, self.sex, self.lifting_capacity,
+              self.breed, self.sound, self.date_of_birth, self.commands)]]
