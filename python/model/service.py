@@ -53,9 +53,7 @@ class Service:
         dog = self.registry.find_dog_by_id(number)
         # command = input("Введите команду:")
         command = "Рядом"
-
         dog.commands.append(command)
-
         print("Список команд")
         print(dog.commands)
 

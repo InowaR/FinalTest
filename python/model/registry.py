@@ -1,6 +1,5 @@
 import csv
 from datetime import datetime
-from typing import List
 from tabulate import tabulate
 
 from python.model.animal import *
@@ -131,10 +130,17 @@ class Registry:
                 dog.add_new_command(command)
 
     def sort_by_date_of_birth(self):
-        pass
-        # print(self.list_dogs.sort(key=lambda dog: dog.date_of_birth))
-        # for dog in self.list_dogs:
-        #     print(tabulate(dog.info()[1], headers=dog.info()[0], tablefmt='grid', stralign='center'))
+        sorted_dogs = sorted(self.list_dogs, key=lambda __dog: __dog.date_of_birth)
+        print("Собаки")
+        headers = None
+        dogs = []
+        for dog in sorted_dogs:
+            headers = dog.info()[0]
+            dogs.append(dog.info()[1])
+        try:
+            print(tabulate(dogs, headers=headers, tablefmt='grid', stralign='center'))
+        except TypeError:
+            print("Пусто")
 
     def save_dogs(self):
         filename = 'dogs.csv'
