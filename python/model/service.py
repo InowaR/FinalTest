@@ -7,6 +7,7 @@ class Service:
     def __init__(self):
         self.dog_id = 0
         self.registry = Registry()
+        self.registry.load_dogs()
 
     def create_dog(self):
         # number = self.dog_id
@@ -23,8 +24,12 @@ class Service:
         # commands = input("Введите команды собаки:")
         # self.registry.create_dog(number, color, name, lifetime, mass, sex, price, nickname, breed, sound,
         #                          date_of_birth, commands)
-        self.registry.create_dog(1, "коричневый", "собака", 10, 3, "мужской", 10000, "Барли", "Овчарка", "гав",
+        self.registry.create_dog(self.dog_id, "коричневый", "собака", 10, 3, "мужской", 10000, "Барли", "Овчарка",
+                                 "гав",
                                  datetime(2023, 1, 1), ["Cидеть", "Голос", "Ко мне"])
+        for dog in self.registry.list_dogs:
+            dog.number = self.dog_id
+            self.dog_id += 1
 
     def show_registry(self):
         self.registry.show_registry()
@@ -32,8 +37,5 @@ class Service:
     def show_animals_sorted_by_date_of_birth(self):
         self.registry.show_animals_sorted_by_date_of_birth()
 
-
-s = Service()
-s.create_dog()
-s.show_registry()
-s.show_animals_sorted_by_date_of_birth()
+    def save_dogs(self):
+        self.registry.save_dogs()

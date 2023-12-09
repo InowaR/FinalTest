@@ -35,11 +35,11 @@ class Dog(Pet):
                f'{self.price}, {self.nickname}, {self.breed}, {self.sound}, {self.date_of_birth}, {self.commands}'
 
     def info(self):
-        return [
-            ['id', 'color', 'name', 'lifetime', 'mass', 'sex', 'price', 'nickname', 'breed', 'sound', 'date_of_birth',
-             'commands'],
-            [(self.number, self.color, self.name, self.lifetime, self.mass, self.sex, self.price, self.nickname,
-              self.breed, self.sound, self.date_of_birth, self.commands)]]
+        return ['id', 'color', 'name', 'lifetime', 'mass', 'sex', 'price', 'nickname', 'breed', 'sound',
+                'date_of_birth',
+                'commands'], (
+            self.number, self.color, self.name, self.lifetime, self.mass, self.sex, self.price, self.nickname,
+            self.breed, self.sound, self.date_of_birth, self.commands)
 
     def add_new_command(self, command):
         self.commands.append(command)
@@ -59,11 +59,11 @@ class Cat(Pet):
                f'{self.price}, {self.nickname}, {self.breed}, {self.sound}, {self.date_of_birth}, {self.commands}'
 
     def info(self):
-        return [
-            ['id', 'color', 'name', 'lifetime', 'mass', 'sex', 'price', 'nickname', 'breed', 'sound', 'date_of_birth',
-             'commands'],
-            [(self.number, self.color, self.name, self.lifetime, self.mass, self.sex, self.price, self.nickname,
-              self.breed, self.sound, self.date_of_birth, self.commands)]]
+        return ['id', 'color', 'name', 'lifetime', 'mass', 'sex', 'price', 'nickname', 'breed', 'sound',
+                'date_of_birth',
+                'commands'], (
+            self.number, self.color, self.name, self.lifetime, self.mass, self.sex, self.price, self.nickname,
+            self.breed, self.sound, self.date_of_birth, self.commands)
 
 
 class Hamster(Pet):
@@ -80,11 +80,11 @@ class Hamster(Pet):
                f'{self.price}, {self.nickname}, {self.breed}, {self.sound}, {self.date_of_birth}, {self.commands}'
 
     def info(self):
-        return [
-            ['id', 'color', 'name', 'lifetime', 'mass', 'sex', 'price', 'nickname', 'breed', 'sound', 'date_of_birth',
-             'commands'],
-            [(self.number, self.color, self.name, self.lifetime, self.mass, self.sex, self.price, self.nickname,
-              self.breed, self.sound, self.date_of_birth, self.commands)]]
+        return ['id', 'color', 'name', 'lifetime', 'mass', 'sex', 'price', 'nickname', 'breed', 'sound',
+                'date_of_birth',
+                'commands'], (
+            self.number, self.color, self.name, self.lifetime, self.mass, self.sex, self.price, self.nickname,
+            self.breed, self.sound, self.date_of_birth, self.commands)
 
 
 class Horse(PackAnimal):
