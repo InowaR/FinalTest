@@ -124,16 +124,42 @@ class Registry:
                         commands)
         self.list_donkeys.append(donkey)
 
-    def find_animal_by_id(self, number):
-        for dog in self.list_dogs:
-            if dog.number == number:
-                print("Собака найдена")
-                return dog
+    def find_animal_by_id(self, number, animal_number):
+        if animal_number == '1':
+            for dog in self.list_dogs:
+                if dog.number == number:
+                    print("Собака найдена")
+                    return dog
+        elif animal_number == '2':
+            for cat in self.list_cats:
+                if cat.number == number:
+                    print("Кошка найдена")
+                    return cat
+        elif animal_number == '3':
+            for hamster in self.list_hamsters:
+                if hamster.number == number:
+                    print("Хомяк найден")
+                    return hamster
+        elif animal_number == '4':
+            for horse in self.list_horses:
+                if horse.number == number:
+                    print("Лошадь найдена")
+                    return horse
+        elif animal_number == '5':
+            for camel in self.list_camels:
+                if camel.number == number:
+                    print("Верблюд найден")
+                    return camel
+        elif animal_number == '6':
+            for donkey in self.list_donkeys:
+                if donkey.number == number:
+                    print("Осел найден")
+                    return donkey
 
-    def add_new_command(self, number, command):
-        for dog in self.list_dogs:
-            if dog.number == number:
-                dog.add_new_command(command)
+    # def add_new_command(self, number, command):
+    #     for dog in self.list_dogs:
+    #         if dog.number == number:
+    #             dog.add_new_command(command)
 
     def sort_by_date_of_birth(self, animal_number):
         if animal_number == "1":

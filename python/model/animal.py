@@ -37,13 +37,13 @@ class Dog(Pet):
         return f'{self.number}, {self.color}, {self.name}, {self.lifetime}, {self.mass}, {self.sex}, ' \
                f'{self.price}, {self.nickname}, {self.breed}, {self.sound}, {self.date_of_birth}, {self.commands}'
 
-    @property
-    def add_command(self):
-        return self.commands
-
-    @add_command.setter
-    def add_command(self, command):
-        self.commands.append(command)
+    # @property
+    # def add_command(self):
+    #     return self.commands
+    #
+    # @add_command.setter
+    # def add_command(self, command):
+    #     self.commands.append(command)
 
     def info(self):
         return ['id', 'color', 'name', 'lifetime', 'mass', 'sex', 'price', 'nickname', 'breed', 'sound',

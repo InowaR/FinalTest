@@ -142,19 +142,19 @@ class Service:
     def save_animals(self, animal_number):
         self.registry.save_animals(animal_number)
 
-    def show_commands(self):
+    def show_commands(self, animal_number):
         # number = input("Введите ID собаки:")
         number = 0
-        dog = self.registry.find_animal_by_id(number)
+        animal = self.registry.find_animal_by_id(number, animal_number)
         print("Список команд")
-        print(dog.commands)
+        print(animal.commands)
 
-    def add_new_command(self):
+    def add_new_command(self, animal_number):
         # number = input("Введите ID собаки:")
         number = 0
-        dog = self.registry.find_animal_by_id(number)
+        animal = self.registry.find_animal_by_id(number, animal_number)
         # command = input("Введите команду:")
         command = "Рядом"
-        dog.commands.append(command)
+        animal.commands.append(command)
         print("Список команд")
-        print(dog.commands)
+        print(animal.commands)
