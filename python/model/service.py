@@ -26,7 +26,7 @@ class Service:
             breed = input("Введите породу собаки:")
             sound = "гав"
             date_of_birth = input("Введите дату рождения собаки в формате 2023-01-01 00:00:00:")
-            commands = input("Введите команды собаки:")
+            commands = input("Введите команды собаки через запятую и 1 пробел:")
             self.registry.create_dog(number, color, name, lifetime, mass, sex, price, nickname, breed, sound,
                                      date_of_birth, commands + ' ')
             for dog in self.registry.list_dogs:
@@ -44,7 +44,7 @@ class Service:
             breed = input("Введите породу кошки:")
             sound = "мяу"
             date_of_birth = input("Введите дату рождения кошки в формате 2023-01-01 00:00:00:")
-            commands = input("Введите команды кошки:")
+            commands = input("Введите команды кошки через запятую и 1 пробел:")
             self.registry.create_cat(number, color, name, lifetime, mass, sex, price, nickname, breed, sound,
                                      date_of_birth, commands + ' ')
             for cat in self.registry.list_cats:
@@ -62,7 +62,7 @@ class Service:
             breed = input("Введите породу хомяка:")
             sound = "чирк"
             date_of_birth = input("Введите дату рождения хомяка в формате 2023-01-01 00:00:00:")
-            commands = input("Введите команды хомяка:")
+            commands = input("Введите команды хомяка через запятую и 1 пробел:")
             self.registry.create_hamster(number, color, name, lifetime, mass, sex, price, nickname, breed, sound,
                                          date_of_birth, commands + ' ')
             for hamster in self.registry.list_hamsters:
@@ -79,7 +79,7 @@ class Service:
             breed = input("Введите породу лошади:")
             sound = "игого"
             date_of_birth = input("Введите дату рождения лошади:")
-            commands = input("Введите команды лошади:")
+            commands = input("Введите команды лошади через запятую и 1 пробел:")
             self.registry.create_horse(number, color, name, lifetime, mass, sex, lifting_capacity, breed, sound,
                                        date_of_birth, commands + ' ')
             for horse in self.registry.list_horses:
@@ -96,7 +96,7 @@ class Service:
             breed = input("Введите породу верблюда:")
             sound = "охо"
             date_of_birth = input("Введите дату рождения верблюда в формате 2023-01-01 00:00:00:")
-            commands = input("Введите команды верблюда:")
+            commands = input("Введите команды верблюда через запятую и 1 пробел:")
             self.registry.create_camel(number, color, name, lifetime, mass, sex, lifting_capacity, breed, sound,
                                        date_of_birth, commands + ' ')
             for camel in self.registry.list_camels:
@@ -113,7 +113,7 @@ class Service:
             breed = input("Введите породу осла:")
             sound = "иа"
             date_of_birth = input("Введите дату рождения осла в формате 2023-01-01 00:00:00:")
-            commands = input("Введите команды осла:")
+            commands = input("Введите команды осла через запятую и 1 пробел:")
             self.registry.create_donkey(number, color, name, lifetime, mass, sex, lifting_capacity, breed, sound,
                                         date_of_birth, commands + ' ')
             for donkey in self.registry.list_donkeys:
