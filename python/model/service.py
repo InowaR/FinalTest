@@ -11,11 +11,12 @@ class Service:
         self.horse_id = 0
         self.camel_id = 0
         self.donkey_id = 0
+        self.count = self.dog_id = self.cat_id + self.hamster_id + self.horse_id + self.camel_id + self.donkey_id
         self.registry = Registry()
         self.registry.load_animals()
 
     def create_animal(self, animal_number):
-        if animal_number == "1":
+        if animal_number == 1:
             number = self.dog_id
             color = input("Введите цвет собаки:")
             name = "Cобакa"
@@ -35,7 +36,7 @@ class Service:
             for dog in self.registry.list_dogs:
                 dog.number = self.dog_id
                 self.dog_id += 1
-        elif animal_number == "2":
+        elif animal_number == 2:
             number = self.cat_id
             color = input("Введите цвет кошки:")
             name = "Кошка"
@@ -55,7 +56,7 @@ class Service:
             for cat in self.registry.list_cats:
                 cat.number = self.cat_id
                 self.cat_id += 1
-        elif animal_number == "3":
+        elif animal_number == 3:
             number = self.hamster_id
             color = input("Введите цвет хомяка:")
             name = "Хомяк"
@@ -75,7 +76,7 @@ class Service:
             for hamster in self.registry.list_hamsters:
                 hamster.number = self.hamster_id
                 self.hamster_id += 1
-        elif animal_number == "4":
+        elif animal_number == 4:
             number = self.horse_id
             color = input("Введите цвет лошади:")
             name = "Лошадь"
@@ -94,7 +95,7 @@ class Service:
             for horse in self.registry.list_horses:
                 horse.number = self.horse_id
                 self.horse_id += 1
-        elif animal_number == "5":
+        elif animal_number == 5:
             number = self.camel_id
             color = input("Введите цвет верблюда:")
             name = "Верблюд"
@@ -113,7 +114,7 @@ class Service:
             for camel in self.registry.list_camels:
                 camel.number = self.camel_id
                 self.camel_id += 1
-        elif animal_number == "6":
+        elif animal_number == 6:
             number = self.donkey_id
             color = input("Введите цвет осла:")
             name = "Осел"
@@ -143,14 +144,14 @@ class Service:
         self.registry.save_animals(animal_number)
 
     def show_commands(self, animal_number):
-        number = input("Введите ID животного:")
+        number = int(input("Введите ID животного:"))
         # number = 0
         animal = self.registry.find_animal_by_id(number, animal_number)
         print("Список команд")
         print(animal.commands)
 
     def add_new_command(self, animal_number):
-        number = input("Введите ID животного:")
+        number = int(input("Введите ID животного:"))
         # number = 0
         animal = self.registry.find_animal_by_id(number, animal_number)
         command = input("Введите новую команду для животного:")
