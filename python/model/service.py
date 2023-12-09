@@ -1,19 +1,17 @@
-from datetime import datetime
-
 from python.model.registry import Registry
 
 
 class Service:
     def __init__(self):
-        self.dog_id = 0
-        self.cat_id = 0
-        self.hamster_id = 0
-        self.horse_id = 0
-        self.camel_id = 0
-        self.donkey_id = 0
-        self.count = self.dog_id = self.cat_id + self.hamster_id + self.horse_id + self.camel_id + self.donkey_id
         self.registry = Registry()
         self.registry.load_animals()
+        self.dog_id = len(self.registry.list_dogs)
+        self.cat_id = len(self.registry.list_cats)
+        self.hamster_id = len(self.registry.list_hamsters)
+        self.horse_id = len(self.registry.list_horses)
+        self.camel_id = len(self.registry.list_camels)
+        self.donkey_id = len(self.registry.list_donkeys)
+        self.count = self.dog_id + self.cat_id + self.hamster_id + self.horse_id + self.camel_id + self.donkey_id
 
     def create_animal(self, animal_number):
         if animal_number == 1:
@@ -27,12 +25,10 @@ class Service:
             nickname = input("Введите имя собаки:")
             breed = input("Введите породу собаки:")
             sound = "гав"
-            date_of_birth = input("Введите дату рождения собаки:")
+            date_of_birth = input("Введите дату рождения собаки в формате 2023-01-01 00:00:00:")
             commands = input("Введите команды собаки:")
             self.registry.create_dog(number, color, name, lifetime, mass, sex, price, nickname, breed, sound,
-                                     date_of_birth, commands)
-            # self.registry.create_dog(self.dog_id, "коричневый", "собака", 10, 3, "мужской", 10000, "Барли", "Овчарка",
-            #                          "гав", datetime(2023, 1, 1), ["Cидеть", "Голос", "Ко мне"])
+                                     date_of_birth, commands + ' ')
             for dog in self.registry.list_dogs:
                 dog.number = self.dog_id
                 self.dog_id += 1
@@ -47,12 +43,10 @@ class Service:
             nickname = input("Введите имя кошки:")
             breed = input("Введите породу кошки:")
             sound = "мяу"
-            date_of_birth = input("Введите дату рождения кошки:")
+            date_of_birth = input("Введите дату рождения кошки в формате 2023-01-01 00:00:00:")
             commands = input("Введите команды кошки:")
             self.registry.create_cat(number, color, name, lifetime, mass, sex, price, nickname, breed, sound,
-                                     date_of_birth, commands)
-            # self.registry.create_cat(self.cat_id, "белый", "кошка", 10, 3, "мужской", 10000, "Киса",
-            #                          "Сиамская", "мяу", datetime(2023, 1, 1), ["Cидеть", "Голос", "Ко мне"])
+                                     date_of_birth, commands + ' ')
             for cat in self.registry.list_cats:
                 cat.number = self.cat_id
                 self.cat_id += 1
@@ -67,12 +61,10 @@ class Service:
             nickname = input("Введите имя хомяка:")
             breed = input("Введите породу хомяка:")
             sound = "чирк"
-            date_of_birth = input("Введите дату рождения хомяка:")
+            date_of_birth = input("Введите дату рождения хомяка в формате 2023-01-01 00:00:00:")
             commands = input("Введите команды хомяка:")
             self.registry.create_hamster(number, color, name, lifetime, mass, sex, price, nickname, breed, sound,
-                                         date_of_birth, commands)
-            # self.registry.create_hamster(self.cat_id, "серый", "хомяк", 10, 3, "мужской", 10000, "Толстик",
-            #                              "Степной", "чирк", datetime(2023, 1, 1), ["Cидеть", "Голос", "Ко мне"])
+                                         date_of_birth, commands + ' ')
             for hamster in self.registry.list_hamsters:
                 hamster.number = self.hamster_id
                 self.hamster_id += 1
@@ -83,15 +75,13 @@ class Service:
             lifetime = 10
             mass = input("Введите вес лошади:")
             sex = input("Введите пол лошади:")
-            lifting_capacity = int(input("Введите грузоподъемность лошади:"))
+            lifting_capacity = int(input("Введите грузоподъемность лошади в формате 2023-01-01 00:00:00:"))
             breed = input("Введите породу лошади:")
             sound = "игого"
             date_of_birth = input("Введите дату рождения лошади:")
             commands = input("Введите команды лошади:")
             self.registry.create_horse(number, color, name, lifetime, mass, sex, lifting_capacity, breed, sound,
-                                       date_of_birth, commands)
-            # self.registry.create_horse(self.horse_id, "красный", "лошадь", 10, 3, "мужской", 90, "красная",
-            #                            "игого", datetime(2023, 1, 1), ["Cидеть", "Голос", "Ко мне"])
+                                       date_of_birth, commands + ' ')
             for horse in self.registry.list_horses:
                 horse.number = self.horse_id
                 self.horse_id += 1
@@ -105,12 +95,10 @@ class Service:
             lifting_capacity = int(input("Введите грузоподъемность верблюда:"))
             breed = input("Введите породу верблюда:")
             sound = "охо"
-            date_of_birth = input("Введите дату рождения верблюда:")
+            date_of_birth = input("Введите дату рождения верблюда в формате 2023-01-01 00:00:00:")
             commands = input("Введите команды верблюда:")
             self.registry.create_camel(number, color, name, lifetime, mass, sex, lifting_capacity, breed, sound,
-                                       date_of_birth, commands)
-            # self.registry.create_camel(self.camel_id, "желтый", "верблюд", 10, 3, "мужской", 90, "тихий",
-            #                            "охо", datetime(2023, 1, 1), ["Cидеть", "Голос", "Ко мне"])
+                                       date_of_birth, commands + ' ')
             for camel in self.registry.list_camels:
                 camel.number = self.camel_id
                 self.camel_id += 1
@@ -124,12 +112,10 @@ class Service:
             lifting_capacity = int(input("Введите грузоподъемность осла:"))
             breed = input("Введите породу осла:")
             sound = "иа"
-            date_of_birth = input("Введите дату рождения осла:")
+            date_of_birth = input("Введите дату рождения осла в формате 2023-01-01 00:00:00:")
             commands = input("Введите команды осла:")
             self.registry.create_donkey(number, color, name, lifetime, mass, sex, lifting_capacity, breed, sound,
-                                        date_of_birth, commands)
-            # self.registry.create_donkey(self.donkey_id, "серый", "осел", 10, 3, "мужской", 90, "ослик",
-            #                             "иа", datetime(2023, 1, 1), ["Cидеть", "Голос", "Ко мне"])
+                                        date_of_birth, commands + ' ')
             for donkey in self.registry.list_donkeys:
                 donkey.number = self.donkey_id
                 self.donkey_id += 1
@@ -145,17 +131,14 @@ class Service:
 
     def show_commands(self, animal_number):
         number = int(input("Введите ID животного:"))
-        # number = 0
         animal = self.registry.find_animal_by_id(number, animal_number)
         print("Список команд")
         print(animal.commands)
 
     def add_new_command(self, animal_number):
         number = int(input("Введите ID животного:"))
-        # number = 0
         animal = self.registry.find_animal_by_id(number, animal_number)
         command = input("Введите новую команду для животного:")
-        # command = "Рядом"
         animal.commands.append(command)
         print("Список команд")
         print(animal.commands)

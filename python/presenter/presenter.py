@@ -6,7 +6,7 @@ class Presenter:
         self.service = Service()
 
     def animal_menu(self):
-        print(self.service.count)
+        print(f"Всего животных в питомнике: {self.service.count}")
         print("1. Собака")
         print("2. Кошка")
         print("3. Хомяк")
