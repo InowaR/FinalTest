@@ -371,10 +371,10 @@ class Registry:
                     mass = int(row[4])
                     sex = row[5]
                     lifting_capacity = int(row[6])
-                    breed = row[8]
-                    sound = row[9]
-                    date_of_birth = datetime.strptime(row[10], '%Y-%m-%d %H:%M:%S')
-                    commands = row[11]
+                    breed = row[7]
+                    sound = row[8]
+                    date_of_birth = datetime.strptime(row[9], '%Y-%m-%d %H:%M:%S')
+                    commands = row[10]
                     command_list = [item.strip("'") for item in commands[1:-1].split(", ")]
                     self.list_horses.append(Horse(number, color, name, lifetime, mass, sex, lifting_capacity,
                                                   breed, sound, date_of_birth, command_list))
@@ -392,10 +392,10 @@ class Registry:
                     mass = int(row[4])
                     sex = row[5]
                     lifting_capacity = int(row[6])
-                    breed = row[8]
-                    sound = row[9]
-                    date_of_birth = datetime.strptime(row[10], '%Y-%m-%d %H:%M:%S')
-                    commands = row[11]
+                    breed = row[7]
+                    sound = row[8]
+                    date_of_birth = datetime.strptime(row[9], '%Y-%m-%d %H:%M:%S')
+                    commands = row[10]
                     command_list = [item.strip("'") for item in commands[1:-1].split(", ")]
                     self.list_camels.append(Camel(number, color, name, lifetime, mass, sex, lifting_capacity,
                                                   breed, sound, date_of_birth, command_list))
@@ -413,10 +413,10 @@ class Registry:
                     mass = int(row[4])
                     sex = row[5]
                     lifting_capacity = int(row[6])
-                    breed = row[8]
-                    sound = row[9]
-                    date_of_birth = datetime.strptime(row[10], '%Y-%m-%d %H:%M:%S')
-                    commands = row[11]
+                    breed = row[7]
+                    sound = row[8]
+                    date_of_birth = datetime.strptime(row[9], '%Y-%m-%d %H:%M:%S')
+                    commands = row[10]
                     command_list = [item.strip("'") for item in commands[1:-1].split(", ")]
                     self.list_donkeys.append(Donkey(number, color, name, lifetime, mass, sex, lifting_capacity,
                                                     breed, sound, date_of_birth, command_list))
