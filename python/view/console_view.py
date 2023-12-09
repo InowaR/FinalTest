@@ -7,7 +7,7 @@ class ConsoleView:
         self.work = True
 
     def start_application(self):
-        print("Реестр животных")
+        print("Приложение реестр животных")
         print("Нажмите 'q' для выхода")
         while self.work:
             self.menu.print_main_menu()

@@ -26,7 +26,6 @@ class Registry:
                 print(tabulate(dogs, headers=headers, tablefmt='grid', stralign='center'))
             except TypeError:
                 print("Пусто")
-            # ----------------------------------------------------------------------------
         elif number == '2':
             print("Кошки")
             headers = None
@@ -38,7 +37,6 @@ class Registry:
                 print(tabulate(cats, headers=headers, tablefmt='grid', stralign='center'))
             except TypeError:
                 print("Пусто")
-            # ----------------------------------------------------------------------------
         elif number == '3':
             print("Хомяки")
             headers = None
@@ -50,7 +48,6 @@ class Registry:
                 print(tabulate(hamsters, headers=headers, tablefmt='grid', stralign='center'))
             except TypeError:
                 print("Пусто")
-            # ----------------------------------------------------------------------------
         elif number == '4':
             print("Лошади")
             headers = None
@@ -62,7 +59,6 @@ class Registry:
                 print(tabulate(horses, headers=headers, tablefmt='grid', stralign='center'))
             except TypeError:
                 print("Пусто")
-            # ----------------------------------------------------------------------------
         elif number == '5':
             print("Верблюды")
             headers = None
@@ -74,7 +70,6 @@ class Registry:
                 print(tabulate(camels, headers=headers, tablefmt='grid', stralign='center'))
             except TypeError:
                 print("Пусто")
-            # ----------------------------------------------------------------------------
         elif number == '6':
             print("Ослы")
             headers = None
@@ -86,7 +81,6 @@ class Registry:
                 print(tabulate(donkeys, headers=headers, tablefmt='grid', stralign='center'))
             except TypeError:
                 print("Пусто")
-            # ----------------------------------------------------------------------------
 
     def create_dog(self, number, color, name, lifetime, mass, sex, price, nickname, breed, sound, date_of_birth,
                    commands):
@@ -156,11 +150,6 @@ class Registry:
                     print("Осел найден")
                     return donkey
 
-    # def add_new_command(self, number, command):
-    #     for dog in self.list_dogs:
-    #         if dog.number == number:
-    #             dog.add_new_command(command)
-
     def sort_by_date_of_birth(self, animal_number):
         if animal_number == "1":
             sorted_dogs = sorted(self.list_dogs, key=lambda __dog: __dog.date_of_birth)
@@ -187,7 +176,7 @@ class Registry:
             except TypeError:
                 print("Пусто")
         elif animal_number == "3":
-            sorted_hamsters = sorted(self.list_dogs, key=lambda __hamster: __hamster.date_of_birth)
+            sorted_hamsters = sorted(self.list_hamsters, key=lambda __hamster: __hamster.date_of_birth)
             print("Хомяки")
             headers = None
             hamsters = []

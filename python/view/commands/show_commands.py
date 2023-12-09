@@ -7,4 +7,4 @@ class ShowAnimalCommands:
         return self.name
 
     def execute(self):
-        self.presenter.show_animal_commands()
+        self.presenter.show_commands()
