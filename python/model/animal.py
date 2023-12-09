@@ -1,3 +1,6 @@
+from typing import List
+
+
 class Animal:
     def __init__(self, number, color, name, lifetime, mass, sex):
         self.number = number
@@ -34,6 +37,14 @@ class Dog(Pet):
         return f'{self.number}, {self.color}, {self.name}, {self.lifetime}, {self.mass}, {self.sex}, ' \
                f'{self.price}, {self.nickname}, {self.breed}, {self.sound}, {self.date_of_birth}, {self.commands}'
 
+    @property
+    def add_command(self):
+        return self.commands
+
+    @add_command.setter
+    def add_command(self, command):
+        self.commands.append(command)
+
     def info(self):
         return ['id', 'color', 'name', 'lifetime', 'mass', 'sex', 'price', 'nickname', 'breed', 'sound',
                 'date_of_birth',
@@ -52,7 +63,7 @@ class Cat(Pet):
         self.breed = breed
         self.sound = sound
         self.date_of_birth = date_of_birth
-        self.commands = commands
+        self.commands: List = commands
 
     def __str__(self):
         return f'{self.number}, {self.color}, {self.name}, {self.lifetime}, {self.mass}, {self.sex}, ' \
@@ -101,11 +112,10 @@ class Horse(PackAnimal):
                f'{self.lifting_capacity}, {self.breed}, {self.sound}, {self.date_of_birth}, {self.commands}'
 
     def info(self):
-        return [
-            ['id', 'color', 'name', 'lifetime', 'mass', 'sex', 'lifting_capacity', 'breed', 'sound', 'date_of_birth',
-             'commands'],
-            [(self.number, self.color, self.name, self.lifetime, self.mass, self.sex, self.lifting_capacity,
-              self.breed, self.sound, self.date_of_birth, self.commands)]]
+        return ['id', 'color', 'name', 'lifetime', 'mass', 'sex', 'lifting_capacity', 'breed', 'sound', 'date_of_birth',
+                'commands'], (
+            self.number, self.color, self.name, self.lifetime, self.mass, self.sex, self.lifting_capacity,
+            self.breed, self.sound, self.date_of_birth, self.commands)
 
 
 class Camel(PackAnimal):
@@ -122,11 +132,10 @@ class Camel(PackAnimal):
                f'{self.lifting_capacity}, {self.breed}, {self.sound}, {self.date_of_birth}, {self.commands}'
 
     def info(self):
-        return [
-            ['id', 'color', 'name', 'lifetime', 'mass', 'sex', 'lifting_capacity', 'breed', 'sound', 'date_of_birth',
-             'commands'],
-            [(self.number, self.color, self.name, self.lifetime, self.mass, self.sex, self.lifting_capacity,
-              self.breed, self.sound, self.date_of_birth, self.commands)]]
+        return ['id', 'color', 'name', 'lifetime', 'mass', 'sex', 'lifting_capacity', 'breed', 'sound', 'date_of_birth',
+                'commands'], (
+            self.number, self.color, self.name, self.lifetime, self.mass, self.sex, self.lifting_capacity,
+            self.breed, self.sound, self.date_of_birth, self.commands)
 
 
 class Donkey(PackAnimal):
@@ -143,8 +152,7 @@ class Donkey(PackAnimal):
                f'{self.lifting_capacity}, {self.breed}, {self.sound}, {self.date_of_birth}, {self.commands}'
 
     def info(self):
-        return [
-            ['id', 'color', 'name', 'lifetime', 'mass', 'sex', 'lifting_capacity', 'breed', 'sound', 'date_of_birth',
-             'commands'],
-            [(self.number, self.color, self.name, self.lifetime, self.mass, self.sex, self.lifting_capacity,
-              self.breed, self.sound, self.date_of_birth, self.commands)]]
+        return ['id', 'color', 'name', 'lifetime', 'mass', 'sex', 'lifting_capacity', 'breed', 'sound', 'date_of_birth',
+                'commands'], (
+            self.number, self.color, self.name, self.lifetime, self.mass, self.sex, self.lifting_capacity,
+            self.breed, self.sound, self.date_of_birth, self.commands)

@@ -11,8 +11,14 @@ class Presenter:
     def show_registry(self):
         self.service.show_registry()
 
-    def show_animals_sorted_by_date_of_birth(self):
-        self.service.show_animals_sorted_by_date_of_birth()
+    def sort_by_date_of_birth(self):
+        self.service.sort_by_date_of_birth()
 
     def save_dogs(self):
         self.service.save_dogs()
+
+    def show_commands(self):
+        self.service.show_commands()
+
+    def add_new_command(self):
+        self.service.add_new_command()

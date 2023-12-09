@@ -34,8 +34,29 @@ class Service:
     def show_registry(self):
         self.registry.show_registry()
 
-    def show_animals_sorted_by_date_of_birth(self):
-        self.registry.show_animals_sorted_by_date_of_birth()
+    def sort_by_date_of_birth(self):
+        self.registry.sort_by_date_of_birth()
 
     def save_dogs(self):
         self.registry.save_dogs()
+
+    def show_commands(self):
+        # number = input("Введите ID собаки:")
+        number = 0
+        dog = self.registry.find_dog_by_id(number)
+        print("Список команд")
+        print(dog.commands)
+
+    def add_new_command(self):
+        # number = input("Введите ID собаки:")
+        number = 0
+        dog = self.registry.find_dog_by_id(number)
+        # command = input("Введите команду:")
+        command = "Рядом"
+
+        dog.commands.append(command)
+
+        print("Список команд")
+        print(dog.commands)
+
+
