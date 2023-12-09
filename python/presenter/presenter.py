@@ -1,24 +1,41 @@
 from python.model.service import Service
 
 
+def animal_menu():
+    print("1. Собака")
+    print("2. Кошка")
+    print("3. Хомяк")
+    print("4. Лошадь")
+    print("5. Верблюд")
+    print("6. Осел")
+    animal_number = input("Выберите животное:")
+    return animal_number
+
+
 class Presenter:
     def __init__(self):
         self.service = Service()
 
-    def create_dog(self):
-        self.service.create_dog()
+    def create_animal(self):
+        animal_number = animal_menu()
+        self.service.create_animal(animal_number)
 
     def show_registry(self):
-        self.service.show_registry()
+        animal_number = animal_menu()
+        self.service.show_registry(animal_number)
 
     def sort_by_date_of_birth(self):
-        self.service.sort_by_date_of_birth()
+        animal_number = animal_menu()
+        self.service.sort_by_date_of_birth(animal_number)
 
-    def save_dogs(self):
-        self.service.save_dogs()
+    def save_animals(self):
+        animal_number = animal_menu()
+        self.service.save_animals(animal_number)
 
     def show_commands(self):
-        self.service.show_commands()
+        animal_number = animal_menu()
+        self.service.show_commands(animal_number)
 
     def add_new_command(self):
-        self.service.add_new_command()
+        animal_number = animal_menu()
+        self.service.add_new_command(animal_number)

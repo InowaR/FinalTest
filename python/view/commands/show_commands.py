@@ -1,4 +1,4 @@
-class ShowCommands:
+class ShowAnimalCommands:
     def __init__(self, presenter):
         self.name = "Показать команды"
         self.presenter = presenter
@@ -7,4 +7,4 @@ class ShowCommands:
         return self.name
 
     def execute(self):
-        self.presenter.show_commands()
+        self.presenter.show_animal_commands()

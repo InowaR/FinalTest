@@ -1,6 +1,6 @@
 class SortByDateOfBirth:
     def __init__(self, presenter):
-        self.name = "Отсортировать собак по дате рождения"
+        self.name = "Отсортировать животных по дате рождения"
         self.presenter = presenter
 
     def get_name(self):

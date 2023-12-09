@@ -1,6 +1,6 @@
 class AddNewCommand:
     def __init__(self, presenter):
-        self.name = "Добавить команду собаке"
+        self.name = "Добавить команду"
         self.presenter = presenter
 
     def get_name(self):

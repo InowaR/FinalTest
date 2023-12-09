@@ -1,10 +1,10 @@
-class SaveDogs:
+class CreateAnimal:
     def __init__(self, presenter):
-        self.name = "Сохранить собак"
+        self.name = "Добавить животное"
         self.presenter = presenter
 
     def get_name(self):
         return self.name
 
     def execute(self):
-        self.presenter.save_dogs()
+        self.presenter.create_animal()
